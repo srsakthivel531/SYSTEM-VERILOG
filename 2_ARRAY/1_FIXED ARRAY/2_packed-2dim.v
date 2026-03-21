@@ -1,4 +1,4 @@
-//FIXED ARRAY (unpacked array)
+//FIXED ARRAY (packed array)
 module array_1D;
   logic [2][4]a;
 initial begin 
