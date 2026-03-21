@@ -3,13 +3,13 @@ module array_1D;
 bit [7:0]a;
 initial begin 
   a='hfx;
-  $display("packed array=%0b",a);
+  $display("packedarray=%0b",a);
   #5;
   a='hfx;
-  $display("packed array=%0d",a);
+  $display("packedarray=%0d",a);
   #5;
   a='hfx;
-  $display("packed array=%0o",a);
+  $display("packedarray=%0o",a);
 end 
 endmodule 
 //OUTPUT 
