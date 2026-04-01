@@ -1,6 +1,6 @@
-//QUEUE 
 module queue;
 int b1[$:5];//bounded
+int value;
 initial begin 
   b1='{10,20,50};
 $display("size of bounded queue=%0d",b1.size());
@@ -14,10 +14,12 @@ $display("after push_front=%p",b1);
   b1.push_back(100);
   $display("after push_back=%p",b1);
 //pop front
-  b1.pop_front();
+  value=b1.pop_front();
+  $display("after pop_front_value=%0d",value);
   $display("after pop_front=%p",b1);
 //pop back 
-  b1.pop_back();
+  value=b1.pop_back();
+  $display("after pop_back_value=%0d",value);
   $display("after pop_back=%p",b1);
 //reversing
   b1.reverse();
@@ -44,7 +46,9 @@ OUTPUT:
 # KERNEL: after inserting='{10, 15, 20, 50}
 # KERNEL: after push_front='{5, 10, 15, 20, 50}
 # KERNEL: after push_back='{5, 10, 15, 20, 50, 100}
+# KERNEL: after pop_front_value=5
 # KERNEL: after pop_front='{10, 15, 20, 50, 100}
+# KERNEL: after pop_back_value=100
 # KERNEL: after pop_back='{10, 15, 20, 50}
 # KERNEL: after reversing='{50, 20, 15, 10}
 # KERNEL: after sorting='{10, 15, 20, 50}
