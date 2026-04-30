@@ -12,13 +12,13 @@ endtask
    $display("AUTOMATIC TASK COUNT=%0d",count2);
 endtask 
 initial begin 
-  $display("_____STATIC TASK_______");
+  $display("STATIC TASK");
   fork 
     static_s();
     static_s();
   join
   #5;
-  $display("_____AUTOMATIC TASK_______");
+  $display("AUTOMATIC TASK");
   fork 
     automatic_s();
     automatic_s();
@@ -26,9 +26,9 @@ initial begin
 end 
 endmodule 
 OUTPUT:
-# KERNEL: _____STATIC TASK_______
+# KERNEL: STATIC TASK
 # KERNEL: STATIC TASK COUNT=1
 # KERNEL: STATIC TASK COUNT=2
-# KERNEL: _____AUTOMATIC TASK_______
+# KERNEL: AUTOMATIC TASK
 # KERNEL: AUTOMATIC TASK COUNT=1
 # KERNEL: AUTOMATIC TASK COUNT=1
