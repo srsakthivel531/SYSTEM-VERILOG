@@ -9,11 +9,11 @@ module func_call;
     if(result==1)
       begin 
     $strobe("$time=%0t,DATA_IN=%8b,PARITY=%0d",$time,data_in,result);
-    $display("________EVEN PARITY GENERATOR_______");
+    $display("EVEN PARITY GENERATOR");
       end 
     else begin
       $strobe("$time=%0t,ODD PARITY GENERATOR DATA_IN=%8b,PARITY=%0d",$time,data_in,result);
-      $display("________ODD PARITY GENERATOR_______");
+      $display("ODD PARITY GENERATOR");
     end     
   endtask 
   initial begin 
@@ -29,9 +29,9 @@ module func_call;
   end 
 endmodule 
 OUTPUT:
-# KERNEL: ________ODD PARITY GENERATOR_______
+# KERNEL:ODD PARITY GENERATOR
 # KERNEL: $time=5,ODD PARITY GENERATOR DATA_IN=11110101,PARITY=1
-# KERNEL: ________EVEN PARITY GENERATOR_______
+# KERNEL: EVEN PARITY GENERATOR
 # KERNEL: $time=15,DATA_IN=10010011,PARITY=0
-# KERNEL: ________ODD PARITY GENERATOR_______
+# KERNEL: ODD PARITY GENERATOR
 # KERNEL: $time=25,ODD PARITY GENERATOR DATA_IN=10010011,PARITY=0
